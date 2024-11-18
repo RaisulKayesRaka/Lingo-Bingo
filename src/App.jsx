@@ -1,7 +1,13 @@
+import Header from "./components/Header";
+
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <header className="mx-auto w-11/12 max-w-screen-xl">
+        <Header />
+      </header>
+      <section>Main</section>
+      <footer>Footer</footer>
     </>
   );
 }
