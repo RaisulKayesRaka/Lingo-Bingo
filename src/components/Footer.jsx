@@ -2,35 +2,6 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    // <footer className="footer bg-gray-900 text-white py-6">
-    //   <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
-    //     {/* Contact Information */}
-    //     <div className="mb-4 md:mb-0">
-    //       <h4 className="text-lg font-semibold">Contact Us</h4>
-    //       <p>Email: support@lingobingo.com</p>
-    //       <p>Phone: +123-456-7890</p>
-    //     </div>
-
-    //     <div className="flex space-x-4 mb-4 md:mb-0">
-    //       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-    //         <FaFacebook className="hover:text-blue-500" size={24} />
-    //       </a>
-    //       <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-    //         <FaTwitter className="hover:text-blue-400" size={24} />
-    //       </a>
-    //       <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-    //         <FaInstagram className="hover:text-pink-500" size={24} />
-    //       </a>
-    //       <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-    //         <FaLinkedin className="hover:text-blue-700" size={24} />
-    //       </a>
-    //     </div>
-
-    //     <div className="text-center md:text-right">
-    //       <p>&copy; {new Date().getFullYear()} Lingo Bingo. All rights reserved.</p>
-    //     </div>
-    //   </div>
-    // </footer>
     <footer className="bg-gray-900 py-6 text-white">
       <div className="mx-auto flex w-11/12 max-w-screen-xl flex-col space-y-4">
         <div className="flex flex-col items-center justify-center">
