@@ -24,7 +24,7 @@ export default function Banner() {
   ];
 
   return (
-    <section className="mx-auto w-11/12 max-w-screen-xl py-8">
+    <section className="mx-auto w-11/12 max-w-screen-xl pb-8">
       <div className="carousel w-full">
         {slides.map(({ id, text, imgSrc, prev, next }) => (
           <div key={id} id={id} className="carousel-item relative w-full">
