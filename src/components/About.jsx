@@ -1,9 +1,9 @@
 const About = () => {
   return (
-    <section id="about" className="px-6 py-16">
+    <section id="about" className="py-16">
       <div className="mx-auto w-11/12 max-w-screen-xl text-center">
         <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-          About Lingo Bingo
+          About
         </h2>
 
         <p className="mb-8 text-center">
