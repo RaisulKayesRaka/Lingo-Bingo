@@ -7,7 +7,7 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import StartLearning from "./pages/StartLearning.jsx";
 import Home from "./pages/Home.jsx"
 import Tutorials from "./pages/Tutorials.jsx";
-import About from "./pages/About.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About/>
+        element: <AboutUs/>
       }
     ]
   },

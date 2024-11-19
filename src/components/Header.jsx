@@ -13,7 +13,7 @@ export default function Header() {
         <NavLink to="/tutorials">Tutorials</NavLink>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/about">About Us</NavLink>
       </li>
     </>
   );
