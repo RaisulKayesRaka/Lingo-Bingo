@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "hi";
+  window.speechSynthesis.speak(utterance);
+}
+
 export default function Lesson() {
   const [lesson, setLesson] = useState([]);
   const { lesson_no } = useParams();
@@ -22,7 +28,8 @@ export default function Lesson() {
         {lesson.map((item) => (
           <div key={item.id} className="rounded-xl border p-2">
             <div
-              className={`rounded-lg p-4 ${
+              onClick={() => pronounceWord(item.word)}
+              className={`rounded-lg p-4 cursor-pointer ${
                 item.difficulty === "easy"
                   ? "bg-green-500"
                   : item.difficulty === "medium"
@@ -60,8 +67,8 @@ export default function Lesson() {
               className="modal modal-bottom sm:modal-middle"
             >
               <div className="modal-box">
-                <div
-                  className={`rounded-lg p-4 ${
+                <div onClick={() => pronounceWord(item.word)}
+                  className={`rounded-lg p-4 cursor-pointer ${
                     item.difficulty === "easy"
                       ? "bg-green-500"
                       : item.difficulty === "medium"
@@ -80,10 +87,14 @@ export default function Lesson() {
                   </p>
                 </div>
                 <div className="mt-4">
-                  <p className="text-center"><strong>When to say</strong></p>
+                  <p className="text-center">
+                    <strong>When to say</strong>
+                  </p>
                   <p className="text-center">{item.when_to_say}</p>
                   <hr className="my-4" />
-                  <p className="text-center"><strong>Example</strong></p>
+                  <p className="text-center">
+                    <strong>Example</strong>
+                  </p>
                   <p className="text-center">{item.example}</p>
                 </div>
                 <div className="modal-action w-full flex-col">

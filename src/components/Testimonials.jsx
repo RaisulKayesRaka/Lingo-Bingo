@@ -1,4 +1,7 @@
 import { FaQuoteLeft } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -20,8 +23,12 @@ const Testimonials = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init();
+  },[])
+
   return (
-    <section id="testimonials" className="py-16">
+    <section id="testimonials" className="py-16" data-aos="zoom-in">
       <div className="mx-auto max-w-screen-xl w-11/12 text-center">
         <h2 className="mb-8 text-3xl font-bold text-gray-800 md:text-4xl">
           What Our Users Say

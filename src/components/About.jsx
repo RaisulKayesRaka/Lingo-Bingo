@@ -1,6 +1,13 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const About = () => {
+  useEffect(() => {
+    AOS.init();
+  },[])
   return (
-    <section id="about" className="py-16">
+    <section id="about" className="py-16" data-aos="zoom-in">
       <div className="mx-auto w-11/12 max-w-screen-xl text-center">
         <h2 className="mb-6 text-3xl font-bold md:text-4xl">
           About

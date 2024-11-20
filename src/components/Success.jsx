@@ -1,4 +1,8 @@
 import CountUp from "react-countup";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function Success() {
   const stats = [
     {
@@ -22,8 +26,12 @@ export default function Success() {
       value: 100,
     },
   ];
+
+  useEffect(() => {
+    AOS.init();
+  },[])
   return (
-    <section className="mx-auto w-11/12 max-w-screen-xl py-16">
+    <section className="mx-auto w-11/12 max-w-screen-xl py-16" data-aos="zoom-in">
       <h2 className="mb-6 text-center text-3xl font-bold md:text-4xl">
         Success
       </h2>
