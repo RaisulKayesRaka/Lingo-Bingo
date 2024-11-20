@@ -5,9 +5,10 @@ import "./index.css";
 import App from "./App.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import StartLearning from "./pages/StartLearning.jsx";
-import Home from "./pages/Home.jsx"
+import Home from "./pages/Home.jsx";
 import Tutorials from "./pages/Tutorials.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
+import Lesson from "./pages/Lesson.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,23 +18,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />,
       },
       {
         path: "/start-learning",
-        element: <StartLearning/>
+        element: <StartLearning />,
       },
       {
         path: "/tutorials",
-        element: <Tutorials/>
+        element: <Tutorials />,
       },
       {
         path: "/about",
-        element: <AboutUs/>
-      }
-    ]
+        element: <AboutUs />,
+      },
+      {
+        path: "/lesson/:lesson_no",
+        element: <Lesson />,
+        loader: () => fetch("/data.json"),
+      },
+    ],
   },
-  
 ]);
 
 createRoot(document.getElementById("root")).render(

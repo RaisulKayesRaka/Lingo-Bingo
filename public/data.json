@@ -159,7 +159,7 @@
     "pronunciation": "muskaan",
     "meaning": "smile",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "lesson_no": 1,
     "when_to_say": "When talking about a smile or expression of happiness.",
     "example": "उसकी मुस्कान बहुत प्यारी है। (Uski muskaan bahut pyaari hai.)"
@@ -258,7 +258,7 @@
     "pronunciation": "padhna",
     "meaning": "to read",
     "part_of_speech": "verb",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 1,
     "when_to_say": "When referring to reading.",
     "example": "मैं हर दिन किताबें पढ़ता हूँ। (Main har din kitaabein padhta hoon.)"
@@ -269,7 +269,7 @@
     "pronunciation": "likhna",
     "meaning": "to write",
     "part_of_speech": "verb",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 1,
     "when_to_say": "When referring to the act of writing.",
     "example": "मैं तुम्हारे लिए पत्र लिख रहा हूँ। (Main tumhare liye patra likh raha hoon.)"
@@ -544,7 +544,7 @@
     "pronunciation": "swasthya",
     "meaning": "health",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 2,
     "when_to_say": "When referring to the condition of one's health.",
     "example": "स्वास्थ्य ही सबसे महत्वपूर्ण है। (Swasthya hi sabse mahatvapurn hai.)"
@@ -676,7 +676,7 @@
     "pronunciation": "kursi",
     "meaning": "chair",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 3,
     "when_to_say": "When referring to a chair or seat.",
     "example": "कुर्सी पर बैठो। (Kursi par baitho.)"
@@ -1083,7 +1083,7 @@
     "pronunciation": "aakaash",
     "meaning": "sky",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 4,
     "when_to_say": "When talking about the sky.",
     "example": "आकाश में बादल हैं। (Aakaash mein baadal hain.)"
@@ -1138,7 +1138,7 @@
     "pronunciation": "sabzi",
     "meaning": "vegetable",
     "part_of_speech": "noun",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "lesson_no": 5,
     "when_to_say": "When referring to vegetables.",
     "example": "मैंने ताजे सब्ज़ी खरीदी है। (Maine taaze sabzi khareedi hai.)"
@@ -1444,9 +1444,9 @@
     "id": "132",
     "word": "खिचड़ी",
     "pronunciation": "khichdi",
-    "meaning": "khichdi (a dish of rice and lentils)",
+    "meaning": "khichdi",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 6,
     "when_to_say": "When referring to the dish of rice and lentils.",
     "example": "मैंने खिचड़ी बनाई है। (Maine khichdi banai hai.)"
@@ -1466,9 +1466,9 @@
     "id": "134",
     "word": "कढ़ाई",
     "pronunciation": "kadhai",
-    "meaning": "wok (a deep frying pan)",
+    "meaning": "wok",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 6,
     "when_to_say": "When referring to a traditional cooking vessel.",
     "example": "कढ़ाई में तेल गरम हो रहा है। (Kadhai mein tel garam ho raha hai.)"
@@ -1743,7 +1743,7 @@
     "pronunciation": "dhuaan",
     "meaning": "smoke",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 7,
     "when_to_say": "When referring to smoke.",
     "example": "आग से धुंआ निकल रहा है। (Aag se dhuaan nikal raha hai.)"
@@ -1809,7 +1809,7 @@
     "pronunciation": "mausam",
     "meaning": "weather",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 7,
     "when_to_say": "When talking about the weather.",
     "example": "आज का मौसम अच्छा है। (Aaj ka mausam accha hai.)"
@@ -2095,7 +2095,7 @@
     "pronunciation": "sahyog",
     "meaning": "cooperation",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 8,
     "when_to_say": "When referring to working together or teamwork.",
     "example": "हमें एक साथ काम करने की आवश्यकता है। (Humein ek saath kaam karne ki avashyakta hai.)"
@@ -2115,9 +2115,9 @@
     "id": "193",
     "word": "कमज़ोरी",
     "pronunciation": "kamzori",
-    "meaning": "weakness",
+    "meaning": "weakness",  
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 8,
     "when_to_say": "When referring to a lack of strength.",
     "example": "उसकी कमज़ोरी उसका डर है। (Uski kamzori uska dar hai.)"
@@ -2161,7 +2161,7 @@
     "pronunciation": "avashyakta",
     "meaning": "necessity",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 8,
     "when_to_say": "When referring to something essential or required.",
     "example": "यह एक आवश्यक कदम है। (Yeh ek avashyak kadam hai.)"
@@ -2183,7 +2183,7 @@
     "pronunciation": "swasthya",
     "meaning": "health",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 8,
     "when_to_say": "When referring to well-being or health.",
     "example": "स्वास्थ्य सबसे महत्वपूर्ण है। (Swasthya sabse mahatvapurn hai.)"
@@ -2227,7 +2227,7 @@
     "pronunciation": "santushti",
     "meaning": "satisfaction",
     "part_of_speech": "noun",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 9,
     "when_to_say": "When referring to contentment or fulfillment.",
     "example": "उसने बहुत मेहनत की और संतुष्ट था। (Usne bahut mehnat ki aur santusht tha.)"
@@ -2271,7 +2271,7 @@
     "pronunciation": "samjhaana",
     "meaning": "to explain",
     "part_of_speech": "verb",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 9,
     "when_to_say": "When clarifying or making someone understand something.",
     "example": "मैंने उसे यह समझाया। (Maine use yeh samjhaaya.)"
@@ -2502,7 +2502,7 @@
     "pronunciation": "sapne banana",
     "meaning": "to dream (aspire)",
     "part_of_speech": "verb",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 10,
     "when_to_say": "When referring to setting dreams or aspirations for the future.",
     "example": "तुम्हें अपने सपने पूरे करने चाहिए। (Tumhein apne sapne poore karne chahiye.)"
@@ -2744,7 +2744,7 @@
     "pronunciation": "samajhna",
     "meaning": "to understand",
     "part_of_speech": "verb",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "lesson_no": 10,
     "when_to_say": "When referring to the act of comprehension or understanding.",
     "example": "क्या तुम मेरी बात समझ रहे हो? (Kya tum meri baat samajh rahe ho?)"
