@@ -1,13 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 export default function Header() {
+  const { user, logOut } = useContext(AuthContext);
+
   const links = (
     <>
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/start-learning">Start Learning</NavLink>
+        <NavLink to="/startLearning">Start Learning</NavLink>
       </li>
       <li>
         <NavLink to="/tutorials">Tutorials</NavLink>
@@ -58,31 +62,40 @@ export default function Header() {
             <ul className="menu menu-horizontal px-1">{links}</ul>
           </div>
           <div className="flex items-center justify-end gap-4">
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="avatar btn btn-circle btn-ghost"
-              >
-                <div className="h-8 w-8 rounded-full border bg-gray-100 sm:h-10 sm:w-10">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src="https://robohash.org/4"
-                  />
+            {user && user?.email ? (
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="avatar btn btn-circle btn-ghost"
+                >
+                  <div className="h-8 w-8 rounded-full border bg-gray-100 sm:h-10 sm:w-10">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src="https://robohash.org/4"
+                    />
+                  </div>
                 </div>
+                <ul
+                  tabIndex={0}
+                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+                >
+                  <li>
+                    <Link to="/profile">My Profile</Link>
+                  </li>
+                  <li>
+                    <button onClick={logOut}>Logout</button>
+                  </li>
+                </ul>
               </div>
-              <ul
-                tabIndex={0}
-                className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+            ) : (
+              <Link
+                to="/login"
+                className="btn btn-sm bg-[#58cc02] font-bold text-white"
               >
-                <li>
-                  <a>My Profile</a>
-                </li>
-                <li>
-                  <a>Logout</a>
-                </li>
-              </ul>
-            </div>
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </section>

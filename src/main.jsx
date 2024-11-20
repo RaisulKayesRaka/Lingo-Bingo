@@ -11,6 +11,9 @@ import AboutUs from "./pages/AboutUs.jsx";
 import Lesson from "./pages/Lesson.jsx";
 import LogIn from "./pages/LogIn.jsx";
 import Register from "./pages/Register.jsx";
+import AuthProvider from "./provider/AuthProvider.jsx";
+import PrivateRoute from "./PrivateRoute.jsx";
+import Profile from "./pages/Profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,12 +26,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/start-learning",
+        path: "/startLearning",
         element: <StartLearning />,
       },
       {
         path: "/tutorials",
-        element: <Tutorials />,
+        element: <PrivateRoute> <Tutorials /> </PrivateRoute>,
       },
       {
         path: "/about",
@@ -36,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/lesson/:lesson_no",
-        element: <Lesson />,
+        element: <PrivateRoute> <Lesson /> </PrivateRoute>,
         loader: () => fetch("/data.json"),
       },
       {
@@ -47,12 +50,18 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      {
+        path: "/profile",
+        element: <PrivateRoute> <Profile /> </PrivateRoute>,
+      },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 );

@@ -41,7 +41,7 @@ export default function StartLearning() {
           ></iframe>
           <Link
             to="/tutorials"
-            className="btn btn-wide mt-4 bg-[#89e219] text-lg font-bold"
+            className="btn btn-wide mt-8 bg-[#58cc02] text-white text-lg font-bold"
           >
             View More
           </Link>
