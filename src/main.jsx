@@ -9,6 +9,8 @@ import Home from "./pages/Home.jsx";
 import Tutorials from "./pages/Tutorials.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import Lesson from "./pages/Lesson.jsx";
+import LogIn from "./pages/LogIn.jsx";
+import Register from "./pages/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
         path: "/lesson/:lesson_no",
         element: <Lesson />,
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/login",
+        element: <LogIn />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
       },
     ],
   },
