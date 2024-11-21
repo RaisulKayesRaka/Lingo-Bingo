@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <section>
       <Banner />
-      <About/>
+      <About />
       <Success />
       <Testimonials />
       <FAQ />

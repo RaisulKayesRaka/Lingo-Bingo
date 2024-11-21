@@ -95,7 +95,8 @@ export default function LogIn() {
               </button>
             </div>
           </form>
-          <button onClick={handleGoogleLogIn}
+          <button
+            onClick={handleGoogleLogIn}
             type="submit"
             className="mt-4 w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]"
           >

@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext, useState } from "react";
 
@@ -6,6 +6,7 @@ export default function ResetPassword() {
   const { resetPassword } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const location = useLocation();
+  const navigate = useNavigate();
   const refEmail = location.state?.email;
 
   const handleSubmit = (e) => {
@@ -15,7 +16,8 @@ export default function ResetPassword() {
 
     resetPassword(email)
       .then(() => {
-        window.location.href = "https://mail.google.com";
+        window.open("https://mail.google.com", "_blank");
+        navigate("/login");
       })
       .catch((error) => {
         setError(error.code);

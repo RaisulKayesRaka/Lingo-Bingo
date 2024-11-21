@@ -29,7 +29,7 @@ export default function Lesson() {
           <div key={item.id} className="rounded-xl border p-2">
             <div
               onClick={() => pronounceWord(item.word)}
-              className={`rounded-lg p-4 cursor-pointer ${
+              className={`cursor-pointer rounded-lg p-4 ${
                 item.difficulty === "easy"
                   ? "bg-green-500"
                   : item.difficulty === "medium"
@@ -67,8 +67,9 @@ export default function Lesson() {
               className="modal modal-bottom sm:modal-middle"
             >
               <div className="modal-box">
-                <div onClick={() => pronounceWord(item.word)}
-                  className={`rounded-lg p-4 cursor-pointer ${
+                <div
+                  onClick={() => pronounceWord(item.word)}
+                  className={`cursor-pointer rounded-lg p-4 ${
                     item.difficulty === "easy"
                       ? "bg-green-500"
                       : item.difficulty === "medium"

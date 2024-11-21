@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 const FAQ = () => {
   useEffect(() => {
     AOS.init();
-
   }, []);
   const [openFAQ, setOpenFAQ] = useState(null);
 
@@ -41,7 +40,12 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-16" data-aos="zoom-in" data-aos-duration="3000">
+    <section
+      id="faq"
+      className="py-16"
+      data-aos="zoom-in"
+      data-aos-duration="3000"
+    >
       <div className="mx-auto w-11/12 max-w-screen-xl">
         <h2 className="mb-8 text-center text-3xl font-bold text-gray-800 md:text-4xl">
           Frequently Asked Questions

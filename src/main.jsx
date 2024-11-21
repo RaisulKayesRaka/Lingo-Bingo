@@ -33,7 +33,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/tutorials",
-        element: <PrivateRoute> <Tutorials /> </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Tutorials />{" "}
+          </PrivateRoute>
+        ),
       },
       {
         path: "/about",
@@ -41,7 +46,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/lesson/:lesson_no",
-        element: <PrivateRoute> <Lesson /> </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Lesson />{" "}
+          </PrivateRoute>
+        ),
         loader: () => fetch("/data.json"),
       },
       {
@@ -54,16 +64,26 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <PrivateRoute> <Profile /> </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Profile />{" "}
+          </PrivateRoute>
+        ),
       },
       {
         path: "/updateProfile",
-        element: <PrivateRoute> <UpdateProfile /> </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <UpdateProfile />{" "}
+          </PrivateRoute>
+        ),
       },
       {
         path: "/resetPassword",
-        element: <ResetPassword/>
-      }
+        element: <ResetPassword />,
+      },
     ],
   },
 ]);

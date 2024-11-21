@@ -69,7 +69,12 @@ export default function Tutorials() {
         </div>
       </section>
       <section className="pt-8 text-center">
-        <Link to="/startLearning" className="btn btn-wide text-lg text-white bg-[#58cc02]">Learn Vocabularies</Link>
+        <Link
+          to="/startLearning"
+          className="btn btn-wide bg-[#58cc02] text-lg text-white"
+        >
+          Learn Vocabularies
+        </Link>
       </section>
     </section>
   );

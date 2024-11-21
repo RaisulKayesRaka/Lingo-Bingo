@@ -1,7 +1,7 @@
 export default function Loading() {
   return (
-    <section className="flex items-center justify-center h-screen">
-        <span className="loading loading-ring loading-lg"></span>
+    <section className="flex h-screen items-center justify-center">
+      <span className="loading loading-ring loading-lg"></span>
     </section>
-  )
+  );
 }

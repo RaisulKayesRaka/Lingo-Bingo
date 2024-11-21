@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -11,7 +12,6 @@ import {
 import { app } from "../../firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
 
-
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
@@ -19,9 +19,9 @@ export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const provider = new GoogleAuthProvider();
-  const googleLogIn = () =>{
+  const googleLogIn = () => {
     return signInWithPopup(auth, provider);
-  }
+  };
 
   const createNewUser = (email, password) => {
     setLoading(true);
@@ -55,7 +55,7 @@ export default function AuthProvider({ children }) {
     loading,
     updateUserProfile,
     resetPassword,
-    googleLogIn
+    googleLogIn,
   };
 
   useEffect(() => {
@@ -69,3 +69,7 @@ export default function AuthProvider({ children }) {
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
 }
+
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
