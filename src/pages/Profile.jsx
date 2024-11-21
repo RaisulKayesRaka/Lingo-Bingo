@@ -4,7 +4,6 @@ import { AuthContext } from "../provider/AuthProvider";
 
 export default function Profile() {
   const { user } = useContext(AuthContext);
-  console.log(user);
 
   return (
     <section className="mx-auto w-11/12 max-w-screen-xl py-16">

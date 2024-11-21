@@ -8,16 +8,36 @@ export default function Header() {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active font-bold" : "")}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/startLearning">Start Learning</NavLink>
+        <NavLink
+          to="/startLearning"
+          className={({ isActive }) => (isActive ? "active font-bold" : "")}
+        >
+          Start Learning
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/tutorials">Tutorials</NavLink>
+        <NavLink
+          to="/tutorials"
+          className={({ isActive }) => (isActive ? "active font-bold" : "")}
+        >
+          Tutorials
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/about">About Us</NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "active font-bold" : "")}
+        >
+          About Us
+        </NavLink>
       </li>
     </>
   );
@@ -82,7 +102,12 @@ export default function Header() {
                   className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
                 >
                   <li>
-                    <Link to="/profile">My Profile</Link>
+                    <NavLink
+                      to="/profile"
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      My Profile
+                    </NavLink>
                   </li>
                   <li>
                     <button onClick={logOut}>Logout</button>

@@ -16,12 +16,18 @@ const About = () => {
       <div className="mx-auto w-11/12 max-w-screen-xl text-center">
         <h2 className="mb-6 text-3xl font-bold md:text-4xl">About</h2>
 
-        <p className="mb-8 text-center">
-          Lingo Bingo is a fun and interactive platform designed to make
-          learning new languages engaging and accessible. We focus on building
-          vocabulary through practical lessons, interactive tutorials, and
-          innovative features, helping users connect with the world, one word at
-          a time.
+        <p className="mb-8 text-justify text-lg">
+          Lingo Bingo is your ultimate companion for learning new
+          languages! Our app is designed to make expanding your vocabulary and
+          improving communication skills in multiple languages fun, engaging,
+          and effortless. We understand that retaining vocabulary can be one of
+          the toughest challenges when learning a new language. That’s why Lingo
+          Bingo is here to simplify the process. With an interactive approach
+          and user-friendly design, we help you overcome this hurdle in an
+          enjoyable way. Start your language-learning journey with just one
+          click and discover how easy and exciting it can be to master new words
+          and phrases. Let Lingo Bingo turn your language goals into
+          achievements!
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
