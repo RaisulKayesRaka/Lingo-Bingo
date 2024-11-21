@@ -15,6 +15,7 @@ import AuthProvider from "./provider/AuthProvider.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
 import Profile from "./pages/Profile.jsx";
 import UpdateProfile from "./pages/UpdateProfile.jsx";
+import ResetPassword from "./pages/ResetPassword.jsx";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/updateProfile",
         element: <PrivateRoute> <UpdateProfile /> </PrivateRoute>,
+      },
+      {
+        path: "/resetPassword",
+        element: <ResetPassword/>
       }
     ],
   },

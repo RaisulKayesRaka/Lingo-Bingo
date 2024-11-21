@@ -1,12 +1,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
 export default function LogIn() {
   const { setUser, userLogin } = useContext(AuthContext);
   const [error, setError] = useState({});
   const location = useLocation();
   const navigate = useNavigate();
+  const emailRef = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -23,6 +25,12 @@ export default function LogIn() {
         setError({ ...error, login: err.code });
       });
   };
+
+  const handleForgotPassword = () => {
+    const email = emailRef.current.value;
+    navigate("/resetPassword", { state: { email } });
+  };
+
   return (
     <section className="mx-auto w-11/12 max-w-screen-xl py-16">
       <div className="mx-auto flex max-w-[500px] items-center justify-center">
@@ -38,6 +46,7 @@ export default function LogIn() {
                   placeholder="Email"
                   id="email"
                   className="w-full rounded-md border p-2"
+                  ref={emailRef}
                   required
                 />
               </label>
@@ -56,9 +65,15 @@ export default function LogIn() {
             {error.login && (
               <p className="text-sm text-red-500">{error.login}</p>
             )}
-            <Link to="/" className="underline">
-              Forgot Password
-            </Link>
+            <div>
+              <button
+                type="button"
+                onClick={handleForgotPassword}
+                className="inline underline"
+              >
+                Forgot Password
+              </button>
+            </div>
             <div className="grid grid-cols-1 gap-4">
               <button
                 type="submit"
