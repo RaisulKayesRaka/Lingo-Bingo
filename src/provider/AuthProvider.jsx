@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { app } from "../../firebase.config";
 
@@ -29,6 +30,10 @@ export default function AuthProvider({ children }) {
     return signOut(auth);
   };
 
+  const updateUserProfile = (updatedData) => {
+    return updateProfile(auth.currentUser, updatedData);
+  };
+
   const authInfo = {
     user,
     setUser,
@@ -36,6 +41,7 @@ export default function AuthProvider({ children }) {
     logOut,
     userLogin,
     loading,
+    updateUserProfile,
   };
 
   useEffect(() => {

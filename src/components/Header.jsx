@@ -70,10 +70,11 @@ export default function Header() {
                   className="avatar btn btn-circle btn-ghost"
                 >
                   <div className="h-8 w-8 rounded-full border bg-gray-100 sm:h-10 sm:w-10">
-                    <img
-                      alt="Tailwind CSS Navbar component"
-                      src="https://robohash.org/4"
-                    />
+                    {user && user?.email ? (
+                      <img src={user?.photoURL} />
+                    ) : (
+                      <img src="https://placehold.co/100" alt="" />
+                    )}
                   </div>
                 </div>
                 <ul

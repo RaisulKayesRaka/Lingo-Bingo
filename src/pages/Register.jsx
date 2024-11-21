@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
-  const { setUser, createNewUser } = useContext(AuthContext);
+  const { setUser, createNewUser, updateUserProfile } = useContext(AuthContext);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +15,6 @@ export default function Register() {
     const photoUrl = form.get("photoUrl");
     const email = form.get("email");
     const password = form.get("password");
-    console.log(name, photoUrl, email, password);
     const regex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
 
     if (!regex.test(password)) {
@@ -28,6 +29,13 @@ export default function Register() {
       .then((userCredential) => {
         const user = userCredential.user;
         setUser(user);
+        updateUserProfile({ displayName: name, photoURL: photoUrl })
+          .then(() => {
+            navigate("/");
+          })
+          .catch((error) => {
+            setError(error.code);
+          });
       })
       .catch((error) => {
         setError(error.code);
@@ -98,9 +106,7 @@ export default function Register() {
               </button>
             </div>
           </form>
-          <button
-            className="mt-4 w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]"
-          >
+          <button className="mt-4 w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]">
             Register with Google
           </button>
           <div className="mt-4 text-center">

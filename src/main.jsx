@@ -14,6 +14,7 @@ import Register from "./pages/Register.jsx";
 import AuthProvider from "./provider/AuthProvider.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
 import Profile from "./pages/Profile.jsx";
+import UpdateProfile from "./pages/UpdateProfile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <PrivateRoute> <Profile /> </PrivateRoute>,
       },
+      {
+        path: "/updateProfile",
+        element: <PrivateRoute> <UpdateProfile /> </PrivateRoute>,
+      }
     ],
   },
 ]);

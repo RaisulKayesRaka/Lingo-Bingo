@@ -30,7 +30,7 @@ export default function LogIn() {
           <h1 className="pb-8 text-center text-3xl font-bold">Log In</h1>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="grid grid-cols-1 gap-4">
-              <label htmlFor="name">
+              <label htmlFor="email">
                 <strong>Email</strong>
                 <input
                   type="email"
@@ -41,7 +41,7 @@ export default function LogIn() {
                   required
                 />
               </label>
-              <label htmlFor="photoUrl">
+              <label htmlFor="password">
                 <strong>Password</strong>
                 <input
                   type="password"
