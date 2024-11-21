@@ -28,7 +28,7 @@ const Testimonials = () => {
   },[])
 
   return (
-    <section id="testimonials" className="py-16" data-aos="zoom-in">
+    <section id="testimonials" className="py-16" data-aos="zoom-in" data-aos-duration="3000">
       <div className="mx-auto max-w-screen-xl w-11/12 text-center">
         <h2 className="mb-8 text-3xl font-bold text-gray-800 md:text-4xl">
           What Our Users Say

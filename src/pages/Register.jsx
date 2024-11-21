@@ -17,7 +17,9 @@ export default function Register() {
     const regex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
 
     if (!regex.test(password)) {
-      setError("Invalid Password. Ensure it has at least one uppercase, one lowercase, and is at least 6 characters long.");
+      setError(
+        "Invalid Password. Ensure it has at least one uppercase, one lowercase, and is at least 6 characters long.",
+      );
       return;
     }
 
@@ -87,22 +89,20 @@ export default function Register() {
             </div>
             {error && <p className="text-sm text-red-500">{error}</p>}
 
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="">
               <button
                 type="submit"
                 className="w-full rounded-md bg-[#58cc02] p-2 font-bold text-white"
               >
                 Register
               </button>
-              <button
-                type="submit"
-                className="w-full rounded-md bg-[#58cc02] p-2 font-bold text-white"
-              >
-                Register with Google
-              </button>
             </div>
           </form>
+          <button
+            className="mt-4 w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]"
+          >
+            Register with Google
+          </button>
           <div className="mt-4 text-center">
             Already have an account?{" "}
             <Link to="/login" className="underline">

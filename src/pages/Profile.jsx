@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 export default function Profile() {
+  const {user} = useContext(AuthContext);
+  console.log(user);
   return (
     <section className="w-11/12 mx-auto max-w-screen-xl py-16">
       <div className="flex flex-col gap-4 justify-center items-center">

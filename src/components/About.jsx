@@ -7,7 +7,7 @@ const About = () => {
     AOS.init();
   },[])
   return (
-    <section id="about" className="py-16" data-aos="zoom-in">
+    <section id="about" className="py-16" data-aos="zoom-in" data-aos-duration="3000">
       <div className="mx-auto w-11/12 max-w-screen-xl text-center">
         <h2 className="mb-6 text-3xl font-bold md:text-4xl">
           About

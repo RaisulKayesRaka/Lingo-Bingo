@@ -68,7 +68,7 @@ export default function LogIn() {
               </button>
               <button
                 type="submit"
-                className="w-full rounded-md bg-[#58cc02] p-2 font-bold text-white"
+                className="w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]"
               >
                 Log In with Google
               </button>

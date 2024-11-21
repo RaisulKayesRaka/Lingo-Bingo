@@ -31,7 +31,7 @@ export default function Success() {
     AOS.init();
   },[])
   return (
-    <section className="mx-auto w-11/12 max-w-screen-xl py-16" data-aos="zoom-in">
+    <section className="mx-auto w-11/12 max-w-screen-xl py-16" data-aos="zoom-in" data-aos-duration="3000">
       <h2 className="mb-6 text-center text-3xl font-bold md:text-4xl">
         Success
       </h2>
