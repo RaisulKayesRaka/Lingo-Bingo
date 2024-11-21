@@ -44,6 +44,14 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/50 py-4 backdrop-blur">
       <section className="mx-auto w-11/12 max-w-screen-xl">
+        {user && user?.email && (
+          <div>
+            <div className="text-center font-extrabold">
+              Welcome! {user?.displayName}
+            </div>
+            <hr className="my-2" />
+          </div>
+        )}
         <div className="grid grid-cols-[1fr_auto_1fr] gap-4">
           <div className="dropdown inline-block md:hidden">
             <div
@@ -68,7 +76,7 @@ export default function Header() {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow"
             >
               {links}
             </ul>
@@ -79,7 +87,7 @@ export default function Header() {
             <h2 className="text-xl font-bold sm:text-2xl">Lingo Bingo</h2>
           </div>
           <div className="hidden items-center justify-center md:flex">
-            <ul className="menu menu-horizontal px-1">{links}</ul>
+            <ul className="menu menu-horizontal gap-2 px-1">{links}</ul>
           </div>
           <div className="flex items-center justify-end gap-4">
             {user && user?.email ? (
@@ -99,7 +107,7 @@ export default function Header() {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow"
                 >
                   <li>
                     <NavLink

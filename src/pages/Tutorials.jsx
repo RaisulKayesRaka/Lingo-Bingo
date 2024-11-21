@@ -75,13 +75,8 @@ export default function Tutorials() {
             ></iframe>
           </div>
         </section>
-        <section className="pt-8 text-center">
-          <Link
-            to="/startLearning"
-            className="btn btn-wide bg-[#58cc02] text-lg text-white"
-          >
-            Learn Vocabularies
-          </Link>
+        <section className="w-full mt-4">
+          <Link to="/startLearning" className="btn bg-[#58cc02] text-white font-bold w-full ">Learn Vocabularies</Link>
         </section>
       </section>
     </>

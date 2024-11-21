@@ -36,7 +36,7 @@ export default function StartLearning() {
           <h2 className="mb-4 text-2xl font-bold">Tutorial</h2>
           <div className="flex w-full flex-col items-center justify-center rounded-xl">
             <iframe
-              className="aspect-video max-w-[560px] rounded-xl"
+              className="aspect-video w-full rounded-xl"
               width="100%"
               height="auto"
               src="https://www.youtube.com/embed/ihPGjbzWZME?si=7cabOM3UEFlroQza"
@@ -44,13 +44,15 @@ export default function StartLearning() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
+          </div>
+          <section className="mt-4 w-full">
             <Link
               to="/tutorials"
-              className="btn btn-wide mt-8 bg-[#58cc02] text-lg font-bold text-white"
+              className="btn w-full bg-[#58cc02] font-bold text-white"
             >
               View More
             </Link>
-          </div>
+          </section>
         </section>
       </section>
     </>

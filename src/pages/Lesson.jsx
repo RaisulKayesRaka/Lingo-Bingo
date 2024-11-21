@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 function pronounceWord(word) {
   const utterance = new SpeechSynthesisUtterance(word);
@@ -23,7 +23,7 @@ export default function Lesson() {
       <Helmet>
         <title>Lesson {lesson_no} | Lingo Bingo</title>
       </Helmet>
-      <section className="mx-auto w-11/12 max-w-screen-xl">
+      <section className="mx-auto w-11/12 max-w-screen-xl pb-16">
         <section className="mb-8 rounded-xl bg-[#58cc02] p-8">
           <h1 className="text-center text-4xl font-bold text-white">
             Lesson {lesson_no}
@@ -114,6 +114,9 @@ export default function Lesson() {
               </dialog>
             </div>
           ))}
+        </section>
+        <section className="w-full mt-4">
+          <Link to="/startLearning" className="btn bg-[#58cc02] text-white font-bold w-full ">Back to Lesson</Link>
         </section>
       </section>
     </>

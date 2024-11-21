@@ -50,8 +50,8 @@ export default function Register() {
         setUser(user);
         navigate("/");
       })
-      .catch((err) => {
-        setError({ ...error, login: err.code });
+      .catch((error) => {
+        setError(error.code);
       });
   };
   return (

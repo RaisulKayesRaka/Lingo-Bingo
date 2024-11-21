@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 export default function LogIn() {
   const { setUser, userLogin, googleLogIn } = useContext(AuthContext);
-  const [error, setError] = useState({});
+  const [error, setError] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
   const emailRef = useRef();
@@ -22,8 +22,8 @@ export default function LogIn() {
         setUser(user);
         navigate(location?.state ? location.state : "/");
       })
-      .catch((err) => {
-        setError({ ...error, login: err.code });
+      .catch((error) => {
+        setError(error.code);
       });
   };
 
@@ -34,8 +34,8 @@ export default function LogIn() {
         setUser(user);
         navigate(location?.state ? location.state : "/");
       })
-      .catch((err) => {
-        setError({ ...error, login: err.code });
+      .catch((error) => {
+        setError(error.code);
       });
   };
 
@@ -79,9 +79,7 @@ export default function LogIn() {
                   />
                 </label>
               </div>
-              {error.login && (
-                <p className="text-sm text-red-500">{error.login}</p>
-              )}
+              {error && <p className="text-sm text-red-500">{error}</p>}
               <div>
                 <button
                   type="button"
