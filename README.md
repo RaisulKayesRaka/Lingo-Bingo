@@ -17,4 +17,5 @@ https://lingo-bingo-9860b.web.app/
 - aos
 - react-countup
 - react-icons
+- react-helmet-async
 - firebase

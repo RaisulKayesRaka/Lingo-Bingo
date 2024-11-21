@@ -16,6 +16,7 @@ import PrivateRoute from "./PrivateRoute.jsx";
 import Profile from "./pages/Profile.jsx";
 import UpdateProfile from "./pages/UpdateProfile.jsx";
 import ResetPassword from "./pages/ResetPassword.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -90,8 +91,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </HelmetProvider>
   </StrictMode>,
 );
