@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
-  const { setUser, createNewUser, updateUserProfile } = useContext(AuthContext);
+  const { setUser, createNewUser, updateUserProfile, googleLogIn } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -24,7 +24,6 @@ export default function Register() {
       return;
     }
 
-    console.log("hello");
     createNewUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
@@ -39,6 +38,18 @@ export default function Register() {
       })
       .catch((error) => {
         setError(error.code);
+      });
+  };
+
+  const handleGoogleLogIn = () => {
+    googleLogIn()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        navigate("/");
+      })
+      .catch((err) => {
+        setError({ ...error, login: err.code });
       });
   };
   return (
@@ -106,7 +117,7 @@ export default function Register() {
               </button>
             </div>
           </form>
-          <button className="mt-4 w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]">
+          <button onClick={handleGoogleLogIn} className="mt-4 w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]">
             Register with Google
           </button>
           <div className="mt-4 text-center">

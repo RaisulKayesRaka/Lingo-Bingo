@@ -6,8 +6,11 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
   sendPasswordResetEmail,
+  signInWithPopup,
 } from "firebase/auth";
 import { app } from "../../firebase.config";
+import { GoogleAuthProvider } from "firebase/auth";
+
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -15,6 +18,10 @@ const auth = getAuth(app);
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const provider = new GoogleAuthProvider();
+  const googleLogIn = () =>{
+    return signInWithPopup(auth, provider);
+  }
 
   const createNewUser = (email, password) => {
     setLoading(true);
@@ -47,7 +54,8 @@ export default function AuthProvider({ children }) {
     userLogin,
     loading,
     updateUserProfile,
-    resetPassword
+    resetPassword,
+    googleLogIn
   };
 
   useEffect(() => {

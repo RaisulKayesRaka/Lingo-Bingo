@@ -3,7 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useContext, useRef, useState } from "react";
 
 export default function LogIn() {
-  const { setUser, userLogin } = useContext(AuthContext);
+  const { setUser, userLogin, googleLogIn } = useContext(AuthContext);
   const [error, setError] = useState({});
   const location = useLocation();
   const navigate = useNavigate();
@@ -18,6 +18,18 @@ export default function LogIn() {
     userLogin(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        setUser(user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((err) => {
+        setError({ ...error, login: err.code });
+      });
+  };
+
+  const handleGoogleLogIn = () => {
+    googleLogIn()
+      .then((result) => {
+        const user = result.user;
         setUser(user);
         navigate(location?.state ? location.state : "/");
       })
@@ -81,14 +93,14 @@ export default function LogIn() {
               >
                 Log In
               </button>
-              <button
-                type="submit"
-                className="w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]"
-              >
-                Log In with Google
-              </button>
             </div>
           </form>
+          <button onClick={handleGoogleLogIn}
+            type="submit"
+            className="mt-4 w-full rounded-md border border-[#58cc02] p-2 font-bold text-[#58cc02]"
+          >
+            Log In with Google
+          </button>
           <div className="mt-4 text-center">
             Don&apos;t have an account?{" "}
             <Link to="/register" className="underline">
