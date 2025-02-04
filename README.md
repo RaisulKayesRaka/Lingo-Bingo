@@ -19,3 +19,5 @@ https://lingo-bingo-9860b.web.app/
 - react-icons
 - react-helmet-async
 - firebase
+
+![image](https://github.com/user-attachments/assets/21fe7074-c4bd-4c92-9e24-6536f1290591)
